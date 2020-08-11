@@ -394,6 +394,7 @@ typedef long long mstime_t; /* millisecond time type. */
 /* The actual Redis Object */
 /*
  * Redis 对象
+ * 是一种能够持有一个sds、list、set的对象。
  */
 #define REDIS_LRU_BITS 24
 #define REDIS_LRU_CLOCK_MAX ((1<<REDIS_LRU_BITS)-1) /* Max value of obj->lru */

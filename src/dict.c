@@ -334,7 +334,8 @@ int dictExpand(dict *d, unsigned long size)
     */
 }
 
-/* Performs N steps of incremental rehashing. Returns 1 if there are still
+/* 
+ * Performs N steps of incremental rehashing. Returns 1 if there are still
  * keys to move from the old to the new hash table, otherwise 0 is returned.
  *
  * 执行 N 步渐进式 rehash 。
@@ -537,8 +538,10 @@ dictEntry *dictAddRaw(dict *d, void *key)
     // T = O(1)
     if (dictIsRehashing(d)) _dictRehashStep(d);
 
-    /* Get the index of the new element, or -1 if
-     * the element already exists. */
+    /* 
+     * Get the index of the new element, or -1 if
+     * the element already exists. 
+     * */
     // 计算键在哈希表中的索引值
     // 如果值为 -1 ，那么表示键已经存在
     // T = O(N)
